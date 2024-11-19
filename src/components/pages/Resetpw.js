@@ -21,7 +21,7 @@ const Resetpw = () => {
 
         // Password reset logic goes here, e.g., calling an API endpoint
         try {
-            const response = await fetch('http://localhost:3001/api/users/reset-password', {
+            const response = await fetch('https://be-fitness-web-1.onrender.com/api/users/reset-password', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

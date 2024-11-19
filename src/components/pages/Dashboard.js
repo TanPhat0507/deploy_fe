@@ -18,7 +18,7 @@ const Dashboard = () => {
 
         if (token && userID) {
             // Fetch user settings (name)
-            fetch('http://localhost:3001/api/users/setting', {
+            fetch('https://be-fitness-web-1.onrender.com/api/users/setting', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const Dashboard = () => {
 
             // Fetch exercise data based on selected date from DateContext
             const dateToFetch = selectedDate || new Date().toISOString().split('T')[0]; // Use selected date or current date if not available
-            fetch(`http://localhost:3001/api/exercises?date=${dateToFetch}`, {
+            fetch(`https://be-fitness-web-1.onrender.com/api/exercises?date=${dateToFetch}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

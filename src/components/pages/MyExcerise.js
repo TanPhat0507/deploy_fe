@@ -92,7 +92,7 @@ const MyExcerise = () => {
             const token = localStorage.getItem('token');
             console.log(token);
             console.log({ 'We are running in handleAddCaledar ': date });
-            const diaryresponse = await fetch(`http://localhost:3001/api/diaries`, {
+            const diaryresponse = await fetch(`https://be-fitness-web-1.onrender.com/api/diaries`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -137,7 +137,7 @@ const MyExcerise = () => {
             const token = localStorage.getItem('token');
             console.log('Token:', token);
 
-            const response = await fetch('http://localhost:3001/api/exercises', {
+            const response = await fetch('https://be-fitness-web-1.onrender.com/api/exercises', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -165,7 +165,7 @@ const MyExcerise = () => {
             const token = localStorage.getItem('token');
             console.log('Token:', token);
 
-            const userResponse = await fetch(`http://localhost:3001/api/exercises?date=${encodeURIComponent(date)}`, {
+            const userResponse = await fetch(`https://be-fitness-web-1.onrender.com/api/exercises?date=${encodeURIComponent(date)}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -205,7 +205,7 @@ const MyExcerise = () => {
     const handleShowexercise = async () => {
         try {
             const token = localStorage.getItem('token');
-            const userResponse = await fetch(`http://localhost:3001/api/exercises/details/${exerciseID}`, {
+            const userResponse = await fetch(`https://be-fitness-web-1.onrender.com/api/exercises/details/${exerciseID}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -246,7 +246,7 @@ const MyExcerise = () => {
             console.log("date", date);
             console.log(`Editing exercise with id: ${id}`);
 
-            const response = await fetch(`http://localhost:3001/api/exercises/${id}`, {
+            const response = await fetch(`https://be-fitness-web-1.onrender.com/api/exercises/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -256,7 +256,7 @@ const MyExcerise = () => {
             });
 
             if (response.ok) {
-                const userResponse = await fetch(`http://localhost:3001/api/exercises?date=${encodeURIComponent(date)}`, {
+                const userResponse = await fetch(`https://be-fitness-web-1.onrender.com/api/exercises?date=${encodeURIComponent(date)}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -303,7 +303,7 @@ const MyExcerise = () => {
             const date = calendar;
             console.log("date", date)
             console.log(`Deleting food with exId: ${id}`);
-            const response = await fetch(`http://localhost:3001/api/exercises/${id}`, {
+            const response = await fetch(`https://be-fitness-web-1.onrender.com/api/exercises/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,

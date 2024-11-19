@@ -20,7 +20,7 @@ const Setting = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch("http://localhost:3001/api/users/setting", {
+                const response = await fetch("https://be-fitness-web-1.onrender.com/api/users/setting", {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -58,7 +58,7 @@ const Setting = () => {
             password,
         };
 
-        fetch("http://localhost:3001/api/users/setting", {
+        fetch("https://be-fitness-web-1.onrender.com/api/users/setting", {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`,

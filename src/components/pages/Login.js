@@ -25,7 +25,7 @@ const Login = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3001/api/users/login', {
+            const response = await fetch('https://be-fitness-web-1.onrender.com/api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Login = () => {
 
         // Send email to backend for reset password
         try {
-            const response = await fetch('http://localhost:3000/api/users/forgot-password', {
+            const response = await fetch('https://be-fitness-web-1.onrender.com/api/users/forgot-password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
